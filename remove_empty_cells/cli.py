@@ -1,12 +1,14 @@
-import sys
-import nbformat
+from sys import argv, exit
+from nbformat import read, write
+from nbformat.validator import normalize  
+
+
 
 def remove_empty_cells_from_file(file_path):
 
-
     # Read in noteboook
     with open(file_path, "r", encoding="utf-8") as f:
-        nb = nbformat.read(f, as_version=4)
+        nb = read(f, as_version=4)
 
     # Count & filter empty cells
     original_count = len(nb.cells)
@@ -15,8 +17,9 @@ def remove_empty_cells_from_file(file_path):
 
     # Test for removed cells
     if removed > 0:
+        normalize(nb)
         with open(file_path, "w", encoding="utf-8") as f:
-            nbformat.write(nb, f)
+            write(nb, f)
         print(f"{file_path}: Removed {removed} empty cell(s)")
         return 1
     else:
@@ -26,11 +29,11 @@ def main():
 
     # Test & iterate over file paths
     exit_code = 0
-    for file_path in sys.argv[1:]:
+    for file_path in argv[1:]:
         if file_path.endswith(".ipynb"):
             result = remove_empty_cells_from_file(file_path)
             exit_code = exit_code or result
-    sys.exit(exit_code)
+    exit(exit_code)
 
 # Run as script
 if __name__ == "__main__":
