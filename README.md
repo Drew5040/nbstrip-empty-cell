@@ -27,5 +27,4 @@ You can also run the hook manually on all files:
 pre-commit run --all-files
 ```
 
-## Downloads
 
