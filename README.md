@@ -1,3 +1,10 @@
+# nbstrip-empty-cells
+
+[![Downloads](https://static.pepy.tech/badge/nbstrip-empty-cells)](https://pepy.tech/project/nbstrip-empty-cells)
+[![PyPI version](https://badge.fury.io/py/nbstrip-empty-cells.svg)](https://badge.fury.io/py/nbstrip-empty-cells)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+
 ## Usage with pre-commit
 
 Add to your `.pre-commit-config.yaml`:
@@ -19,3 +26,6 @@ You can also run the hook manually on all files:
 ```bash
 pre-commit run --all-files
 ```
+
+## Downloads
+
