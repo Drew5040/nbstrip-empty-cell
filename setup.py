@@ -1,21 +1,21 @@
 from pathlib import Path
+from setuptools import setup, find_packages
 
 this_directory = Path(__file__).parent
 long_description = (this_directory / "README.md").read_text(encoding="utf-8")
 
-from setuptools import setup, find_packages
 
 setup(
     name="nbstrip-empty-cells",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    version="0.1.0",
+    version="0.1.2",
     description="Remove empty code and markdown cells from Jupyter notebooks (ideal for pre-commit hooks)",
     author="Drew5040",
-    packages=find_packages(),  
+    packages=find_packages(),
     entry_points={
         "console_scripts": [
-            "nbstrip-empty-cell = remove_empty_cells.cli:main"
+            "nbstrip-empty-cells = remove_empty_cells.cli:main"
         ],
     },
     install_requires=[

@@ -3,7 +3,7 @@
 - id: nbstrip-empty-cells
   name: Remove Empty Cells from Jupyter Notebooks
   description: Remove empty code and markdown cells from .ipynb notebooks before committing
-  entry: python3 -m remove_empty_cells.cli 
+  entry: python3 -m remove_empty_cells.cli
   language: python
   types: [jupyter]
   files: ^.*\.ipynb$
