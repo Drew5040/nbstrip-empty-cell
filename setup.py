@@ -9,7 +9,7 @@ setup(
     name="nbstrip-empty-cells",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    version="0.1.2",
+    version="0.1.3",
     description="Remove empty code and markdown cells from Jupyter notebooks (ideal for pre-commit hooks)",
     author="Drew5040",
     packages=find_packages(),

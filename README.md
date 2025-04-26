@@ -4,8 +4,10 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
-## v0.1.2
+## v0.1.3
 - Minor edits to documentation and README formatting.
+- CLI refference: `nbstrip-empty-cell` from `v0.1.0`, `v0.1.1` -> `nbstrip-empty-cells`
+- `nbstrip-empty-cells` works in `v0.1.2` & `v0.1.3`
 
 ## What this Hook Does
 This hook automatically removes empty code and markdown cells from Jupyter notebooks before they are committed. 
@@ -22,7 +24,7 @@ Add to your `.pre-commit-config.yaml` in your notebook repository:
 
 ```yaml
 - repo: https://github.com/Drew5040/nbstrip-empty-cell
-  rev: v0.1.1
+  rev: v0.1.3
   hooks:
     - id: nbstrip-empty-cells
 ```
